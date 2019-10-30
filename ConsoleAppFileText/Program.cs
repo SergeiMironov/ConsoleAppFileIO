@@ -81,8 +81,22 @@ namespace ConsoleAppFileText
             {
                 // Добавляем данные в текстовый файл
             }
-
-
+            
+            
+            /*Тип File поддерживает несколько полезных методов, которые пригодятся
+            при работе с текстовыми файлами. Например, метод ReadAllLines() позволяет 
+            открыть указанный файл и прочитать из него все строки - в результате
+            будет возвращен массив строк.После того как все данные из файла прочи­таны, 
+            файл будет закрыт.*/
+        //Пример:
+            string[] myFriends = {"Jane","Max","John"};
+            // Записать все данные в файл
+            File.WriteAllLines(@"С:\testfiles\friends.txt", myFriends);
+            // Прочитать все обратно и вывести
+            foreach (string friend in File. ReadAllLines(@"C:\testfiles\friends.txt"))
+            {
+                Console.WriteLine("{0}", friend);
+            }
 
         }
     }
