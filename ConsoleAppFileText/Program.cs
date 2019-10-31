@@ -64,7 +64,7 @@ namespace ConsoleAppFileText
 
             //Пример открытия текстового файла:
             FileInfo txt = new FileInfo(@"program.log");
-            using (StreamReader txt_reader = txt.OpenText())
+            using (StreamReader txtReader = txt.OpenText())
             {
                 // Читаем данные из текстового файла
             }
